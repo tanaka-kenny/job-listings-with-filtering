@@ -62,6 +62,11 @@
     margin-bottom: 10px;
 }
 
+.info h4:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
 .info .bottomLine {
     color: var( --Dark-Grayish-Cyan);
     display: flex;
@@ -93,4 +98,10 @@
     background-color: var(--Light-Grayish-Cyan-filterTablets);
     padding: 5px;
     
+}
+
+.filters .f:hover {
+    background-color: var(--Cyan);
+    color: #fff;
+    cursor: pointer;
 }
