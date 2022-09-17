@@ -2,10 +2,11 @@
 
 /* colors */
 :root {
-  --Light-Grayish-Cyan: hsl(180, 52%, 96%); /* (Background) */
-  --Light-Grayish-Cyan: hsl(180, 31%, 95%); /*  (Filter Tablets */
+  --Light-Grayish-Cyan-BG: hsl(180, 52%, 96%); /* (Background) */
+  --Light-Grayish-Cyan-filterTablets: hsl(180, 31%, 95%); /*  (Filter Tablets */
   --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
   --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+  --Cyan:  #16b2b5;
 }
 
 * {
@@ -15,6 +16,7 @@
 body {
   margin: 0;
   font-family: 'League Spartan', sans-serif;
+  background-color: var(--Light-Grayish-Cyan-BG);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   

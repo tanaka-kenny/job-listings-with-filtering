@@ -1,0 +1,96 @@
+.jobListing {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border-left: 5px solid var(--Cyan);
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 10px 15px;
+}
+
+.left-col {
+    flex: .4;
+    display: flex;
+    align-items: center;
+}
+
+.right-col {
+    flex: .6;
+}
+
+.avatar {
+    margin-left: 30px;
+}
+
+.info {
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.info p {
+    margin-bottom: 10px;
+}
+
+.info .company-name {
+    color: var(--Cyan);
+    margin-right: 15px;
+    font-weight: 700;
+}
+
+.info .new {
+    background-color: var(--Cyan);
+    margin-right: 15px;
+    padding: 5px;
+    border-radius: 17px;
+    color: #fff;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+.info .featured {
+    background-color: black;
+    color: #fff;
+    margin-right: 15px;
+    padding: 5px;
+    border-radius: 17px;
+    padding-top: 5px;
+}
+
+.info h4 {
+    font-size: 18px;
+    color: var(--Very-Dark-Grayish-Cyan);
+    margin-bottom: 10px;
+}
+
+.info .bottomLine {
+    color: var( --Dark-Grayish-Cyan);
+    display: flex;
+}
+
+.info .bottomLine span {
+    margin-right: 15px;
+}
+
+.info .bottomLine .dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--Dark-Grayish-Cyan);
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+    top: 3px;
+}
+
+.filters {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.filters .f {
+    margin-right: 13px;
+    margin-left: 13px;
+    color: var(--Cyan);
+    background-color: var(--Light-Grayish-Cyan-filterTablets);
+    padding: 5px;
+    
+}
