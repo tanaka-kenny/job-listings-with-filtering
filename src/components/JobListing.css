@@ -6,7 +6,9 @@
     background-color: #fff;
     width: 100%;
     padding: 20px 10px 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    /* box-shadow: none|h-offset v-offset blur spread color */
+    box-shadow: 3px 3px 5px 5px var(--Dark-Grayish-Cyan);
 }
 
 .left-col {
