@@ -1,0 +1,6 @@
+.header {
+    height: 120px;
+    background-color: var(--Cyan);
+    background-image: url("../../public/images/bg-header-desktop.svg");
+    background-size: cover;
+}
