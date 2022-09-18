@@ -1,21 +1,6 @@
 import './JobListing.css';
 
 function JobListing({ job }) {
-    job =   {
-        "id": 1,
-        "company": "Photosnap",
-        "logo": "./images/photosnap.svg",
-        "new": true,
-        "featured": true,
-        "position": "Senior Frontend Developer",
-        "role": "Frontend",
-        "level": "Senior",
-        "postedAt": "1d ago",
-        "contract": "Full Time",
-        "location": "USA Only",
-        "languages": ["HTML", "CSS", "JavaScript"],
-        "tools": []
-      }
 
   return (
     <div className='jobListing'>
@@ -31,8 +16,8 @@ function JobListing({ job }) {
                 </p>
                 <h4>Senior Frontend Developer</h4>
                 <p className='bottomLine'>
-                    <span>{job.postedAt}</span> <div className="dot"></div>
-                    <span>{job.contract}</span> <div className="dot"></div>
+                    <span>{job.postedAt}</span> <span className="dot"></span>
+                    <span>{job.contract}</span> <span className="dot"></span>
                     <span>{job.location}</span> 
                 </p>
             </div>
@@ -40,12 +25,10 @@ function JobListing({ job }) {
         <div className="right-col">
             <div className="filters">
                 {
-                    job.languages.map(l => <div className="f">{l}</div> )
+                    job.languages.map(l => <div className="f" key={l.toString()}>{l}</div> )
                 }
             </div>
         </div>
-
-        
     </div>
   )
 }

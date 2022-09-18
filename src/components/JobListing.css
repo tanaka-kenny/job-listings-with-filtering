@@ -6,6 +6,7 @@
     background-color: #fff;
     width: 100%;
     padding: 20px 10px 15px;
+    margin-bottom: 15px;
 }
 
 .left-col {
@@ -60,6 +61,7 @@
     font-size: 18px;
     color: var(--Very-Dark-Grayish-Cyan);
     margin-bottom: 10px;
+    margin-top: 12px;
 }
 
 .info h4:hover {
