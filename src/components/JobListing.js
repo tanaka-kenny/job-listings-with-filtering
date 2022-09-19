@@ -3,7 +3,7 @@ import './JobListing.css';
 function JobListing({ job }) {
 
   return (
-    <div className='jobListing'>
+    <div className={job.featured ? 'jobListingIsFeatured' : 'jobListing'} >
         <div className="left-col">
             <div className="avatar">
                 <img src={job.logo} alt="" />
