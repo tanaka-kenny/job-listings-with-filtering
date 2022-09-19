@@ -1,0 +1,58 @@
+.filter-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 100px;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.filter-bar .row {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    height: 15px;
+    border-radius: 5px;
+}
+
+.filter-bar .row .col-left {
+    background-color: var(--Light-Grayish-Cyan-filterTablets);
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+
+.filter-bar .row .col-right {
+    background-color: var(--Cyan);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+    color: #fff;
+
+}
+
+.filter-bar .row .col-right:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.filter-bar button {
+    position: absolute;
+    right: 20px;
+    border: none;
+    background: none;
+    color: cyan;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.filter-bar button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
