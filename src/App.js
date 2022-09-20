@@ -27,15 +27,17 @@ function App() {
   const onClearAllFilterItems = () => {
     setFilterItems([]);
   }
-  
+
   return (
     <div className="app">
       <Header />
       <div className="body">
+        {filterItems.length > 0 &&
         <FilterBar  
           filterItems={filterItems} 
           onClearAllFilterItems={onClearAllFilterItems}
-          onRemoveFilterItem={onRemoveFilterItem} />
+          onRemoveFilterItem={onRemoveFilterItem} 
+          /> }
         {
           jobs.map(l => 
             <JobListing job={l} 
