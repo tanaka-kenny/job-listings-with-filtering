@@ -1,6 +1,6 @@
 import './FilterBar.css'
 
-function FilterBar({ filterItems }) {
+function FilterBar({ filterItems, onClearAllFilterItems, onRemoveFilterItem }) {
 
   return (
     <div className='filter-bar'>
@@ -9,12 +9,12 @@ function FilterBar({ filterItems }) {
           return (
             <div className="row" key={f}>
               <div className="col-left">{f}</div>
-              <div className="col-right">X</div>
+              <div className="col-right" onClick={() => onRemoveFilterItem(f)}>X</div>
             </div>
           )
         })
       }
-      <button>Clear</button>
+      <button onClick={onClearAllFilterItems}>Clear</button>
     </div>
   )
 }

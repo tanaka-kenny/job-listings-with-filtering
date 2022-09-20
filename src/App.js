@@ -13,26 +13,34 @@ function App() {
     setJobs(listings);
   },[]);
 
-  const onClickSelectItem = (filterItem) => {
-    setFilterItems(filterItems => {
-      // check if item already exits in array
-      if (filterItems.indexOf(filterItem) <= -1)
-        return [ ...filterItems, filterItem];
-      return filterItems;
-    });
+  const onSelectFilterItem = (filterItem) => {
+    setFilterItems((
+      filterItems.indexOf(filterItem) <= -1) ? 
+      [ ...filterItems, filterItem] :
+      filterItems);
   }
 
+  const onRemoveFilterItem = (filterItem) => {
+    setFilterItems(filterItems.filter(item => item != filterItem));
+  }
 
+  const onClearAllFilterItems = () => {
+    setFilterItems([]);
+  }
+  
   return (
     <div className="app">
       <Header />
       <div className="body">
-        <FilterBar  filterItems={filterItems} />
+        <FilterBar  
+          filterItems={filterItems} 
+          onClearAllFilterItems={onClearAllFilterItems}
+          onRemoveFilterItem={onRemoveFilterItem} />
         {
           jobs.map(l => 
             <JobListing job={l} 
             key={l.id} 
-            onClickFilterItem={onClickSelectItem} />)
+            onSelectFilterItem={onSelectFilterItem} />)
         }
       </div>
     </div>
