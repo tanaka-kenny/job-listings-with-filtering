@@ -1,6 +1,6 @@
 import './JobListing.css';
 
-function JobListing({ job }) {
+function JobListing({ job, onClickFilterItem }) {
 
   return (
     <div className={job.featured ? 'jobListingIsFeatured' : 'jobListing'} >
@@ -25,7 +25,10 @@ function JobListing({ job }) {
         <div className="right-col">
             <div className="filters">
                 {
-                    job.languages.map(l => <div className="f" key={l.toString()}>{l}</div> )
+                    job.languages.map(l => 
+                        <div className="f" 
+                        key={l.toString()}
+                        onClick={() => onClickFilterItem(l)}>{l}</div> )
                 }
             </div>
         </div>

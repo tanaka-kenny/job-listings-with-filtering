@@ -1,20 +1,19 @@
 import './FilterBar.css'
 
-function FilterBar() {
+function FilterBar({ filterItems }) {
+
   return (
     <div className='filter-bar'>
-      <div className="row">
-        <div className="col-left">Frontend</div>
-        <div className="col-right">X</div>
-      </div>
-      <div className="row">
-        <div className="col-left">CSS</div>
-        <div className="col-right">X</div>
-      </div>
-      <div className="row">
-        <div className="col-left">JavaScript</div>
-        <div className="col-right">X</div>
-      </div>
+      {
+        filterItems.map(f => {
+          return (
+            <div className="row" key={f}>
+              <div className="col-left">{f}</div>
+              <div className="col-right">X</div>
+            </div>
+          )
+        })
+      }
       <button>Clear</button>
     </div>
   )
