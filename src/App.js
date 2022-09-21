@@ -10,14 +10,18 @@ function App() {
   const [filterItems, setFilterItems ] = useState([]);
 
   useEffect(() => {
-    setJobs(listings);
-  },[]);
+    setJobs(filterItems.length > 0 ? 
+      listings.filter(li => filterItems.every(item => li.languages.includes(item))) :
+      listings
+      )
+  });
 
   const onSelectFilterItem = (filterItem) => {
     setFilterItems((
       filterItems.indexOf(filterItem) <= -1) ? 
-      [ ...filterItems, filterItem] :
-      filterItems);
+        [ ...filterItems, filterItem] :
+        filterItems
+      );
   }
 
   const onRemoveFilterItem = (filterItem) => {
