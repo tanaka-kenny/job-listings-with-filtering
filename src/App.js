@@ -14,6 +14,7 @@ function App() {
       listings.filter(li => filterItems.every(item => li.languages.includes(item))) :
       listings
       )
+    
   });
 
   const onSelectFilterItem = (filterItem) => {
