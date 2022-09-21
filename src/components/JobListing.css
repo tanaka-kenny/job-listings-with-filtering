@@ -90,6 +90,7 @@
 
 .info .bottomLine span {
     margin-right: 15px;
+    width: max-content;
 }
 
 .info .bottomLine .dot {
