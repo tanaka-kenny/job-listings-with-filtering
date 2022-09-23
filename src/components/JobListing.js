@@ -14,7 +14,7 @@ function JobListing({ job, onSelectFilterItem }) {
                     {job.new && <span className='new'>NEW!</span> }
                     {job.featured && <span className='featured'>FEATURED</span>}
                 </p>
-                <h4>Senior Frontend Developer</h4>
+                <h4>{job.position}</h4>
                 <p className='bottomLine'>
                     <span>{job.postedAt}</span> <span className="dot"></span>
                     <span>{job.contract}</span> <span className="dot"></span>
