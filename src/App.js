@@ -6,8 +6,8 @@ import listings from './data/data';
 import FilterBar from './components/FilterBar';
 
 function App() {
-  const [jobs, setJobs] = useState([]);
-  const [filterItems, setFilterItems ] = useState([]);
+  const [jobs, setJobs] = useState(() => []);
+  const [filterItems, setFilterItems ] = useState(() => []);
 
   useEffect(() => {
     setJobs(filterItems.length > 0 ? 
@@ -15,7 +15,7 @@ function App() {
       listings
       )
     
-  });
+  },[filterItems]);
 
   const onSelectFilterItem = (filterItem) => {
     setFilterItems((
@@ -55,3 +55,12 @@ function App() {
 }
 
 export default App;
+
+// Notes of useState.
+// * must run in order
+// * assign initial values inside arrow fns to avoid the fn running every time
+
+// Notes on useEffect
+// * needs a dependency arr
+// *
+// *
