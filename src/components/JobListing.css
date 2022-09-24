@@ -124,7 +124,8 @@
     color: var(--Cyan);
     background-color: var(--Light-Grayish-Cyan-filterTablets);
     padding: 5px;
-    
+    height: fit-content;
+    border-radius: 3px;
 }
 
 .filters .f:hover {
@@ -133,14 +134,42 @@
     cursor: pointer;
 }
 
-/* @media (min-width: 991px) {
-    .filters {
-        justify-content: flex-end;
-        margin-left: 45px;
-    }
+@media (min-width: 768px) {
 
     .jobListing, .jobListingIsFeatured {
-        grid-template-columns: 100%;
-        grid-template-columns: 35% 65%;
+        width: 80%;
+        grid-template-columns: 15% 75%;
+        margin-bottom: 30px;
     }
-}  */
+
+    .content {
+        display: flex;
+        align-items: center;
+    }
+
+    .info hr {
+        display: none;
+    }
+
+    .avatar {
+        position: static;
+        margin-bottom: 0;
+        padding-left: 15px;
+    }
+
+    .avatar img {
+        width: 90px;
+        height: auto;
+        position: static;
+    }
+
+    .info {
+        flex: .4;
+    }
+
+    .filters {
+        flex: .6;
+        justify-content: flex-end;
+        margin-right: -12%;
+    }
+} 

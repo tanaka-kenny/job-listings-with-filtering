@@ -4,3 +4,9 @@
     background-image: url("../../public/images/bg-header-desktop.svg");
     background-size: cover;
 }
+
+@media (max-width: 600px) {
+    .header {
+        background-image: url('../../public//images/bg-header-mobile.svg');
+    }
+}

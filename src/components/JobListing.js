@@ -5,7 +5,7 @@ function JobListing({ job, onSelectFilterItem }) {
   return (
     <div className={job.featured ? 'jobListingIsFeatured' : 'jobListing'} >
         <div className="avatar">
-            <img src="https://tanaka-kenny.github.io/job-listings-with-filtering/images/photosnap.svg" alt="" />
+            <img src={job.logo} alt="" />
         </div>
         <div className="content">
             <div className="info">
