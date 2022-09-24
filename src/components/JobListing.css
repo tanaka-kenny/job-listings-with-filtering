@@ -1,45 +1,49 @@
 .jobListing {
-    display: flex;
+    display: grid;
     align-items: center;
     border-radius: 5px;
     background-color: #fff;
-    width: 100%;
+    width: fit-content;
     padding: 20px 10px 15px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     box-shadow: 0px 6px 10px -5px var(--Dark-Grayish-Cyan);
     box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .jobListingIsFeatured {
     border-left: 5px solid var(--Cyan);
-    display: flex;
+    display: grid;
     align-items: center;
     border-radius: 5px;
     background-color: #fff;
-    width: 100%;
+    width: fit-content;
     padding: 20px 10px 15px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     box-shadow: 0px 6px 10px -5px var(--Dark-Grayish-Cyan);
     box-sizing: border-box;
-}
-
-.left-col {
-    flex: .4;
-    display: flex;
-    align-items: center;
-}
-
-.right-col {
-    flex: .6;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .avatar {
-    margin-left: 30px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.avatar img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: -10px;
 }
 
 .info {
     font-size: 15px;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 .info p {
@@ -93,6 +97,12 @@
     width: max-content;
 }
 
+.info hr {
+    margin-bottom: 10px;
+    width: 80%;
+    border: 1px solid lightgrey;
+}
+
 .info .bottomLine .dot {
     width: 5px;
     height: 5px;
@@ -105,7 +115,7 @@
 
 .filters {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .filters .f {
@@ -122,3 +132,15 @@
     color: #fff;
     cursor: pointer;
 }
+
+/* @media (min-width: 991px) {
+    .filters {
+        justify-content: flex-end;
+        margin-left: 45px;
+    }
+
+    .jobListing, .jobListingIsFeatured {
+        grid-template-columns: 100%;
+        grid-template-columns: 35% 65%;
+    }
+}  */

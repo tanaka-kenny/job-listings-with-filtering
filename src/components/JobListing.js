@@ -4,10 +4,10 @@ function JobListing({ job, onSelectFilterItem }) {
 
   return (
     <div className={job.featured ? 'jobListingIsFeatured' : 'jobListing'} >
-        <div className="left-col">
-            <div className="avatar">
-                <img src={job.logo} alt="" />
-            </div>
+        <div className="avatar">
+            <img src="https://tanaka-kenny.github.io/job-listings-with-filtering/images/photosnap.svg" alt="" />
+        </div>
+        <div className="content">
             <div className="info">
                 <p>
                     <span className="company-name">{job.company}</span>
@@ -20,9 +20,8 @@ function JobListing({ job, onSelectFilterItem }) {
                     <span>{job.contract}</span> <span className="dot"></span>
                     <span>{job.location}</span> 
                 </p>
+                <hr />
             </div>
-        </div>
-        <div className="right-col">
             <div className="filters">
                 {
                     job.languages.map(l => 
